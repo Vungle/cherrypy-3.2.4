@@ -300,7 +300,7 @@ try:
     # module.
     import simplejson as json
     json_decode = json.JSONDecoder().decode
-    _json_encode = json.JSONEncoder().iterencode
+    _json_encode = json.JSONEncoder(for_json=True).iterencode
 except ImportError:
     if sys.version_info >= (2, 6):
         # Python >=2.6 : json is part of the standard library
